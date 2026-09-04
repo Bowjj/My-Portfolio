@@ -1,85 +1,111 @@
-💻 My Portfolio
+# 💻 My Portfolio
 
-A personal developer portfolio built with React, TypeScript, and Vite.
+A personal developer portfolio built with **React, TypeScript, and Vite**.
 
-This website showcases my background, technical skills, projects, and experience as an Information Technology student aspiring to become a software developer.
+This portfolio showcases my background, technical skills, and projects as an **Information Technology student aspiring to become a software developer**.
 
-🌐 Live Website: https://portfolio-kowding-ni-bowj.vercel.app
+🌐 **Live Website:** [View Portfolio](https://portfolio-kowding-ni-bowj.vercel.app)
 
-🛠️ Tech Stack
-Category	Technologies
-Frontend	React, TypeScript, HTML, CSS
-Build Tool	Vite
-UI	JSX / TSX, Custom CSS
-Version Control	Git & GitHub
-Deployment	Vercel
+---
 
-📂 Project Structure
-My-Portfolio/
-│
-├── public/
-│   ├── profile.jpg
-│   └── Job_Tantay_CV.pdf
-│
-├── src/
-│   ├── assets/
-│   │
-│   ├── components/
-│   │   ├── About.tsx
-│   │   ├── CodeVisual.tsx
-│   │   ├── Contact.tsx
-│   │   ├── Footer.tsx
-│   │   ├── Hero.tsx
-│   │   ├── Navbar.tsx
-│   │   └── Projects.tsx
-│   │
-│   ├── data/
-│   │   └── projects.ts
-│   │
-│   ├── App.tsx
-│   ├── index.css
-│   └── main.tsx
-│
-├── index.html
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
-🚀 Getting Started
-Prerequisites
+## ✨ Features
+
+* 👨‍💻 Personal introduction and background
+* 🛠️ Technical skills showcase
+* 📂 Featured projects
+* 🔗 GitHub and project links
+* 📄 Downloadable CV
+* 📱 Responsive design
+* ✨ Interactive animations
+* 📬 Contact section
+
+---
+
+## 🛠️ Tech Stack
+
+| Category            | Technologies                 |
+| ------------------- | ---------------------------- |
+| **Frontend**        | React, TypeScript, HTML, CSS |
+| **Build Tool**      | Vite                         |
+| **UI**              | JSX / TSX, Custom CSS        |
+| **Version Control** | Git & GitHub                 |
+| **Deployment**      | Vercel                       |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
 
 Make sure you have the following installed:
 
-Node.js
-npm
-Git
-1. Clone the Repository
+* [Node.js](https://nodejs.org/)
+* npm
+* Git
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/Bowjj/My-Portfolio.git
 cd My-Portfolio
-2. Install Dependencies
+```
+
+### 2. Install Dependencies
+
+```bash
 npm install
-3. Run the Development Server
+```
+
+### 3. Start the Development Server
+
+```bash
 npm run dev
+```
 
 Open the local URL provided by Vite in your browser.
 
-📦 Build for Production
+---
 
-To create a production build:
+## 📦 Build for Production
 
+Create a production build:
+
+```bash
 npm run build
+```
 
-To preview the production build locally:
+Preview the production build locally:
 
+```bash
 npm run preview
-📜 Available Scripts
-Command	Description
-npm run dev	Starts the Vite development server
-npm run build	Builds the application for production
-npm run preview	Previews the production build
-npm run lint	Runs Oxlint to check the code
-🎯 Purpose
+```
 
-This portfolio was created as a personal platform to present my skills, projects, and development experience.
+---
 
-It also serves as a way for potential employers, internship coordinators, and other developers to learn more about me and the projects I have worked on.
+## 📜 Available Scripts
+
+| Command           | Description                           |
+| ----------------- | ------------------------------------- |
+| `npm run dev`     | Starts the development server         |
+| `npm run build`   | Builds the application for production |
+| `npm run preview` | Previews the production build         |
+| `npm run lint`    | Checks the code for linting issues    |
+
+---
+
+## 🎯 Purpose
+
+This portfolio was created to showcase my **skills, projects, and development experience** in one place.
+
+It serves as my personal platform where potential employers, internship coordinators, and fellow developers can learn more about my work and growth as an aspiring software developer.
+
+---
+
+## 🔗 Links
+
+* 🌐 [Portfolio](https://portfolio-kowding-ni-bowj.vercel.app)
+* 💻 [GitHub](https://github.com/Bowjj)
+
+---
+
+⭐ **Thank you for checking out my portfolio!**
