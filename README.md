@@ -1,111 +1,71 @@
-# 💻 My Portfolio
+# Job Tantay Portfolio
 
-A personal developer portfolio built with **React, TypeScript, and Vite**.
+A responsive single-page developer portfolio built with React, TypeScript, and Vite. It showcases Job Tantay's background, technical skills, selected projects, CV, and professional links as an Information Technology student aspiring to become a software developer.
 
-This portfolio showcases my background, technical skills, and projects as an **Information Technology student aspiring to become a software developer**.
+## Live Website
 
-🌐 **Live Website:** [View Portfolio](https://portfolio-kowding-ni-bowj.vercel.app)
+[https://portfolio-eight-sigma-j7uzznbysb.vercel.app/](https://portfolio-eight-sigma-j7uzznbysb.vercel.app/)
 
----
+## Features
 
-## ✨ Features
+- Personal introduction and technical skills
+- Featured projects with screenshots, repository links, and live demos
+- Downloadable CV and social profile links
+- Responsive single-page layout with smooth navigation
+- Scroll-aware active navigation and subtle animations
+- Contact form delivered through Formspree
 
-* 👨‍💻 Personal introduction and background
-* 🛠️ Technical skills showcase
-* 📂 Featured projects
-* 🔗 GitHub and project links
-* 📄 Downloadable CV
-* 📱 Responsive design
-* ✨ Interactive animations
-* 📬 Contact section
+## Technologies Used
 
----
+| Category | Technologies |
+| --- | --- |
+| Frontend | React, TypeScript, HTML, CSS, JSX / TSX |
+| Build Tool | Vite |
+| Contact Form | Formspree |
+| Version Control | Git and GitHub |
+| Deployment | Vercel |
 
-## 🛠️ Tech Stack
-
-| Category            | Technologies                 |
-| ------------------- | ---------------------------- |
-| **Frontend**        | React, TypeScript, HTML, CSS |
-| **Build Tool**      | Vite                         |
-| **UI**              | JSX / TSX, Custom CSS        |
-| **Version Control** | Git & GitHub                 |
-| **Deployment**      | Vercel                       |
-
----
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-Make sure you have the following installed:
+- Node.js 20 or later
+- npm
 
-* [Node.js](https://nodejs.org/)
-* npm
-* Git
-
-### 1. Clone the Repository
+### Install and Run
 
 ```bash
-git clone https://github.com/Bowjj/My-Portfolio.git
-cd My-Portfolio
-```
-
-### 2. Install Dependencies
-
-```bash
+git clone https://github.com/Bowjj/my-portfolio.git
+cd my-portfolio
 npm install
-```
-
-### 3. Start the Development Server
-
-```bash
 npm run dev
 ```
 
-Open the local URL provided by Vite in your browser.
+Open the local URL printed by Vite, typically `http://localhost:5173`.
 
----
-
-## 📦 Build for Production
-
-Create a production build:
+## Available Commands
 
 ```bash
+# Create an optimized production build
 npm run build
-```
 
-Preview the production build locally:
+# Check code quality
+npm run lint
 
-```bash
+# Preview the production build locally
 npm run preview
 ```
 
----
+## Deployment
 
-## 📜 Available Scripts
+The site is deployed on Vercel. Vercel automatically detects the Vite setup and uses:
 
-| Command           | Description                           |
-| ----------------- | ------------------------------------- |
-| `npm run dev`     | Starts the development server         |
-| `npm run build`   | Builds the application for production |
-| `npm run preview` | Previews the production build         |
-| `npm run lint`    | Checks the code for linting issues    |
+- Build command: `npm run build`
+- Output directory: `dist`
 
----
+The `public/` folder contains static deployment assets, including the profile photo, CV, and project screenshots.
 
-## 🎯 Purpose
+## Links
 
-This portfolio was created to showcase my **skills, projects, and development experience** in one place.
-
-It serves as my personal platform where potential employers, internship coordinators, and fellow developers can learn more about my work and growth as an aspiring software developer.
-
----
-
-## 🔗 Links
-
-* 🌐 [Portfolio](https://portfolio-kowding-ni-bowj.vercel.app)
-* 💻 [GitHub](https://github.com/Bowjj)
-
----
-
-⭐ **Thank you for checking out my portfolio!**
+- [Portfolio](https://portfolio-eight-sigma-j7uzznbysb.vercel.app/)
+- [GitHub](https://github.com/Bowjj)
