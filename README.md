@@ -1,32 +1,85 @@
-# React + TypeScript + Vite
+💻 My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A personal developer portfolio built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+This website showcases my background, technical skills, projects, and experience as an Information Technology student aspiring to become a software developer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🌐 Live Website: https://portfolio-kowding-ni-bowj.vercel.app
 
-## React Compiler
+🛠️ Tech Stack
+Category	Technologies
+Frontend	React, TypeScript, HTML, CSS
+Build Tool	Vite
+UI	JSX / TSX, Custom CSS
+Version Control	Git & GitHub
+Deployment	Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+📂 Project Structure
+My-Portfolio/
+│
+├── public/
+│   ├── profile.jpg
+│   └── Job_Tantay_CV.pdf
+│
+├── src/
+│   ├── assets/
+│   │
+│   ├── components/
+│   │   ├── About.tsx
+│   │   ├── CodeVisual.tsx
+│   │   ├── Contact.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Navbar.tsx
+│   │   └── Projects.tsx
+│   │
+│   ├── data/
+│   │   └── projects.ts
+│   │
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+│
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+🚀 Getting Started
+Prerequisites
 
-## Expanding the Oxlint configuration
+Make sure you have the following installed:
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Node.js
+npm
+Git
+1. Clone the Repository
+git clone https://github.com/Bowjj/My-Portfolio.git
+cd My-Portfolio
+2. Install Dependencies
+npm install
+3. Run the Development Server
+npm run dev
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+Open the local URL provided by Vite in your browser.
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+📦 Build for Production
+
+To create a production build:
+
+npm run build
+
+To preview the production build locally:
+
+npm run preview
+📜 Available Scripts
+Command	Description
+npm run dev	Starts the Vite development server
+npm run build	Builds the application for production
+npm run preview	Previews the production build
+npm run lint	Runs Oxlint to check the code
+🎯 Purpose
+
+This portfolio was created as a personal platform to present my skills, projects, and development experience.
+
+It also serves as a way for potential employers, internship coordinators, and other developers to learn more about me and the projects I have worked on.
