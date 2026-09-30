@@ -1,8 +1,52 @@
-const skillGroups = [
-  ['Frontend', 'CSS, HTML, JavaScript, TypeScript, React, JSX / TSX, Flutter, Tailwind CSS, Figma'],
-  ['Backend', 'PHP, JavaScript, MySQL, Supabase (Postgres, RLS, Auth)'],
-  ['DevOps', 'Git, Docker'],
-  ['Networking Tools', 'Cisco Packet Tracer'],
+import { FaCss3Alt, FaDocker, FaGitAlt, FaHtml5, FaJs, FaPhp, FaReact } from 'react-icons/fa6'
+import { SiCisco, SiExpo, SiFigma, SiFlutter, SiMysql, SiPostgresql, SiSupabase, SiTailwindcss, SiTypescript } from 'react-icons/si'
+import type { IconType } from 'react-icons'
+
+type Skill = {
+  name: string
+  Icon: IconType
+  color: string
+}
+
+const skillGroups: { category: string; skills: Skill[] }[] = [
+  {
+    category: 'Frontend',
+    skills: [
+      { name: 'HTML', Icon: FaHtml5, color: '#e34f26' },
+      { name: 'CSS', Icon: FaCss3Alt, color: '#1572b6' },
+      { name: 'JavaScript', Icon: FaJs, color: '#f7df1e' },
+      { name: 'TypeScript', Icon: SiTypescript, color: '#3178c6' },
+      { name: 'React', Icon: FaReact, color: '#61dafb' },
+      { name: 'Tailwind CSS', Icon: SiTailwindcss, color: '#38bdf8' },
+      { name: 'Figma', Icon: SiFigma, color: '#f24e1e' },
+    ],
+  },
+  {
+    category: 'Mobile',
+    skills: [
+      { name: 'React Native', Icon: FaReact, color: '#61dafb' },
+      { name: 'Expo', Icon: SiExpo, color: '#a5b4fc' },
+      { name: 'Flutter', Icon: SiFlutter, color: '#54c5f8' },
+    ],
+  },
+  {
+    category: 'Backend',
+    skills: [
+      { name: 'PHP', Icon: FaPhp, color: '#777bb4' },
+      { name: 'JavaScript', Icon: FaJs, color: '#f7df1e' },
+      { name: 'MySQL', Icon: SiMysql, color: '#4479a1' },
+      { name: 'PostgreSQL', Icon: SiPostgresql, color: '#4169e1' },
+      { name: 'Supabase', Icon: SiSupabase, color: '#3ecf8e' },
+    ],
+  },
+  {
+    category: 'Tools & Integrations',
+    skills: [
+      { name: 'Git', Icon: FaGitAlt, color: '#f05032' },
+      { name: 'Docker', Icon: FaDocker, color: '#2496ed' },
+      { name: 'Cisco Packet Tracer', Icon: SiCisco, color: '#1ba0d7' },
+    ],
+  },
 ]
 
 export function About() {
@@ -42,15 +86,24 @@ export function About() {
         </div>
       </div>
       <div className="tech-stack reveal-on-scroll">
-        <p className="section-label">TECHNICAL SKILLS</p>
-        <dl className="skill-groups">
-          {skillGroups.map(([category, skills]) => (
-            <div className="skill-row" key={category}>
-              <dt>{category}</dt>
-              <dd>{skills}</dd>
-            </div>
+        <p className="section-label">TECH STACK</p>
+        <div className="stack-groups">
+          {skillGroups.map(({ category, skills }) => (
+            <section className="stack-group" key={category} aria-labelledby={`stack-${category}`}>
+              <h3 id={`stack-${category}`} className="stack-heading">{category}</h3>
+              <ul className="tech-grid">
+                {skills.map(({ name, Icon, color }) => (
+                  <li key={name}>
+                    <div className="tech-card">
+                      <Icon aria-hidden="true" style={{ color }} />
+                      <span>{name}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </section>
           ))}
-        </dl>
+        </div>
       </div>
     </section>
   )

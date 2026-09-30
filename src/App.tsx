@@ -6,8 +6,20 @@ import { Hero } from './components/Hero'
 import { Navbar } from './components/Navbar'
 import { Projects } from './components/Projects'
 
+type Theme = 'dark' | 'light'
+
 function App() {
   const [activeSection, setActiveSection] = useState('home')
+  const [theme, setTheme] = useState<Theme>(() => {
+    const savedTheme = localStorage.getItem('theme')
+    if (savedTheme === 'dark' || savedTheme === 'light') return savedTheme
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+  })
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme
+    localStorage.setItem('theme', theme)
+  }, [theme])
 
   useEffect(() => {
     const sections = document.querySelectorAll<HTMLElement>('main section[id]')
@@ -30,7 +42,7 @@ function App() {
     return () => { sectionObserver.disconnect(); revealObserver.disconnect() }
   }, [])
 
-  return <><Navbar activeSection={activeSection} /><main><Hero /><About /><Projects /><Contact /></main><Footer /></>
+  return <><Navbar activeSection={activeSection} theme={theme} onThemeChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')} /><main><Hero /><About /><Projects /><Contact /></main><Footer /></>
 }
 
 export default App

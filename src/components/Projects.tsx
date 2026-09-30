@@ -11,12 +11,18 @@ function ProjectCard({ project }: { project: Project }) {
         <div className="project-content">
           <h3>{project.title}</h3>
           <p className="project-role">{project.role}</p>
-          <p className="project-ai-note">Leveraged AI-assisted workflows to improve development efficiency and iteration.</p>
           <p>{project.description}</p>
-        <div className="project-techs">{project.technologies.map((tech) => <span key={tech}>{tech}</span>)}</div>
+        <div className="project-techs" aria-label="Technologies used">
+          {project.technologies.map(({ name, Icon, color }) => (
+            <span className="project-tech-icon" key={name} title={name} aria-label={name}>
+              <Icon aria-hidden="true" style={{ color }} />
+              <small>{name}</small>
+            </span>
+          ))}
+        </div>
         <div className="project-links">
-          <a href={project.repository} target="_blank" rel="noreferrer">{project.repositoryLabel} <span>↗</span></a>
-          {project.demo && project.demoLabel && <a href={project.demo} target={project.demo.startsWith('#') ? undefined : '_blank'} rel={project.demo.startsWith('#') ? undefined : 'noreferrer'}>{project.demoLabel} <span>↗</span></a>}
+          <a className="project-action project-action-secondary" href={project.repository} target="_blank" rel="noreferrer">{project.repositoryLabel} <span>↗</span></a>
+          {project.demo && project.demoLabel && <a className="project-action project-action-primary" href={project.demo} target={project.demo.startsWith('#') ? undefined : '_blank'} rel={project.demo.startsWith('#') ? undefined : 'noreferrer'}>{project.demoLabel} <span>↗</span></a>}
         </div>
       </div>
     </article>
