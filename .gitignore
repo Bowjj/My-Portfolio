@@ -15,6 +15,11 @@ dist-ssr
 .env.*
 !.env.example
 
+# Local-only VeriPay screenshots may contain private payment data.
+public/projects/veripay-dashboard.png
+public/projects/veripay-history.png
+public/projects/veripay-excel-export.png
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
