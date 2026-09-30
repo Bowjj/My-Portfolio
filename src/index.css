@@ -84,8 +84,11 @@ html[data-theme="light"] .project-detail-copy ul { color: #765a61; }
 .project-detail-body { grid-template-columns: 1fr; }
 .project-detail-gallery { border-right: 0; border-bottom: 1px solid #42252b; }
 
+html { scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
+
 .project-detail-panel { scrollbar-width: thin; scrollbar-color: #a42d3f #15090c; }
-.project-detail-panel::-webkit-scrollbar { width: 10px; }
+.project-detail-panel::-webkit-scrollbar { display: block; width: 10px; }
 .project-detail-panel::-webkit-scrollbar-track { background: #15090c; }
 .project-detail-panel::-webkit-scrollbar-thumb { border: 2px solid #15090c; border-radius: 999px; background: linear-gradient(#c74355, #7f1a2a); }
 .project-detail-panel::-webkit-scrollbar-thumb:hover { background: linear-gradient(#ee6170, #a42d3f); }
