@@ -15,7 +15,9 @@ type ProjectImage = {
 
 type ProjectDetails = {
   paragraphs: string[]
+  sections?: { heading: string; paragraphs: string[] }[]
   features: string[]
+  closingHeading?: string
   closingParagraph?: string
 }
 
@@ -110,7 +112,7 @@ export const projects: Project[] = [
   {
     title: 'VERIPAY',
     role: 'Payment Reconciliation & Verification System',
-    description: 'A local-first tool that matches payment records with GCash statements by exact reference number and creates annotated Excel outputs.',
+    description: 'A client-based system built from real-world requirements that automates payment reconciliation by matching payment records with GCash statements and generating organized, annotated Excel outputs.',
     technologies: [
       { name: 'Next.js', Icon: SiNextdotjs, color: '#f0e7e9' },
       { name: 'TypeScript', Icon: SiTypescript, color: '#3178c6' },
@@ -124,27 +126,41 @@ export const projects: Project[] = [
     art: 'veripay',
     details: {
       paragraphs: [
-        'VeriPay is a payment reconciliation and verification system I developed to automate and simplify the process of comparing payment records with GCash transaction statements.',
-        'I built VeriPay to solve a repetitive workflow where transactions had to be manually searched, matched, and verified one by one. The system processes Excel-based payment records and multiple GCash transaction statements, automatically matches transactions using exact reference numbers, and identifies records that require further attention.',
-        'VeriPay can detect missing or unmatched reference numbers, duplicate transactions, and other records that require manual verification. It also supports CASH and BANK payment handling, matched customer annotations, verification history, and workspace-based organization.',
-        'Rather than completely replacing manual verification, VeriPay automates the repetitive parts of the process while providing a structured manual review workflow for transactions that cannot be confidently reconciled automatically.',
-        'After verification, the system generates organized Excel outputs, including annotated payment records and individual annotated GCash transaction statements, making the results easier to review, track, and maintain.',
+        'VeriPay is a client-based payment reconciliation and verification system developed according to specific requirements provided by the client. The system was designed to improve an existing workflow for comparing payment records with GCash transaction statements.',
+      ],
+      sections: [
+        {
+          heading: 'The Problem',
+          paragraphs: [
+            "The client's verification process involved manually searching, matching, and checking transactions one by one across payment records and multiple GCash statements. This repetitive process required significant manual effort and made it difficult to efficiently identify missing references, duplicate transactions, and records requiring further review.",
+          ],
+        },
+        {
+          heading: 'The Solution',
+          paragraphs: [
+            'I developed VeriPay to automate the repetitive parts of this workflow while preserving manual verification where human review is still necessary.',
+            'The system processes Excel-based payment records alongside multiple GCash transaction statements and automatically reconciles transactions using exact reference numbers. It identifies successfully matched transactions as well as missing references, unmatched records, duplicates, and other transactions that require manual verification.',
+            'For cases that cannot be confidently reconciled automatically, VeriPay provides a structured manual review workflow instead of forcing an automatic match.',
+            'Once verification is complete, the system generates organized and annotated Excel outputs for both the payment records and individual GCash statements, making the results easier to review, track, and maintain.',
+          ],
+        },
       ],
       features: [
         'Excel (XLSX) payment record and GCash statement import',
-        'Support for multiple GCash transaction statements',
+        'Multiple GCash statement processing',
         'Exact reference-number reconciliation',
-        'Missing and reference-not-found detection',
-        'Duplicate reference detection',
+        'Missing and unmatched reference detection',
+        'Duplicate transaction detection',
         'Manual review workflow for unresolved transactions',
         'CASH and BANK payment handling',
         'Matched customer annotations',
         'Verification history',
-        'Annotated Payment Records export',
+        'Annotated payment record exports',
         'Individual annotated GCash statement exports',
         'Workspace-based organization',
       ],
-      closingParagraph: 'VeriPay was developed primarily as a practical tool for my personal workflow and client-related work. It demonstrates my ability to identify a real-world operational problem and build a system that reduces repetitive manual work, improves organization, and makes payment verification more efficient and reliable.',
+      closingHeading: 'Project Outcome',
+      closingParagraph: 'VeriPay transformed the client\'s repetitive payment verification workflow into a more structured and automated process. The project demonstrates my ability to understand client requirements, analyze an existing workflow, translate those requirements into system functionality, and develop a practical solution for a real-world operational problem.',
     },
     images: [
       { src: '/projects/veripay-dashboard.png', alt: 'VeriPay dashboard showing recent verification runs' },

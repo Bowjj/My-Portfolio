@@ -8,8 +8,10 @@ function ProjectDetailCopy({ project }: { project: Project }) {
 
   return <div className="project-detail-copy">
     {project.details.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+    {project.details.sections?.map((section) => <div key={section.heading}><h5>{section.heading}</h5>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>)}
     <h5>Key Features</h5>
     <ul>{project.details.features.map((feature) => <li key={feature}>{feature}</li>)}</ul>
+    {project.details.closingHeading && <h5>{project.details.closingHeading}</h5>}
     {project.details.closingParagraph && <p>{project.details.closingParagraph}</p>}
   </div>
 }
@@ -105,5 +107,10 @@ function ProjectCard({ project }: { project: Project }) {
 }
 
 export function Projects() {
-  return <section id="projects" className="section projects-section"><div className="section-heading reveal-on-scroll"><p className="section-label">SELECTED WORK</p><h2>Featured <span>Projects</span></h2></div><div className="projects-grid">{projects.map((project) => <ProjectCard key={project.title} project={project} />)}</div></section>
+  const orderedProjects = [...projects].sort((first, second) => {
+    if (first.title === 'VERIPAY') return -1
+    if (second.title === 'VERIPAY') return 1
+    return 0
+  })
+  return <section id="projects" className="section projects-section"><div className="section-heading reveal-on-scroll"><p className="section-label">SELECTED WORK</p><h2>Featured <span>Projects</span></h2></div><div className="projects-grid">{orderedProjects.map((project) => <ProjectCard key={project.title} project={project} />)}</div></section>
 }
